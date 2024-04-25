@@ -14,9 +14,9 @@ class Header:
         with allure.step("Click header search loupe"):
             self.search_loupe.click()
 
-    @allure.step("Type text {text} to header search field")
     def type_text_to_search_filed(self, text):
-        self.search_input_text.type(text)
+        with allure.step(f"Type text {text} to header search field"):
+            self.search_input_text.type(text)
 
     def check_one_film_search_result_dropdown(self):
         with allure.step("Check one dropdown search result"):

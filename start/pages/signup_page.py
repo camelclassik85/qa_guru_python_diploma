@@ -23,10 +23,10 @@ class SignupPage:
         with allure.step("Validate SignUp page title"):
             browser.should(have.title(web_signup_page_title))
 
-    @allure.step("Fill registration form. Type email and password")
     def fill_registration_form(self, email, password):
-        self.email_field.type(email)
-        self.password_field.type(password)
+        with allure.step(f"Fill registration form. Type email: {email} and password: {password}"):
+            self.email_field.type(email)
+            self.password_field.type(password)
 
     def accept_policy(self):
         with allure.step("Policy checkbox accept"):

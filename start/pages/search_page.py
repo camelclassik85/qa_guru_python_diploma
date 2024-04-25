@@ -27,9 +27,9 @@ class SearchPage:
         with allure.step("Validate Search page title"):
             browser.should(have.title(web_search_title))
 
-    @allure.step("Type text {text} to search field")
     def type_text_to_filed(self, text):
-        self.search_field.type(text)
+        with allure.step(f"Type text {text} to search field"):
+            self.search_field.type(text)
 
     def check_multiple_film_search_result(self):
         with allure.step("Check more than 1 search film results"):

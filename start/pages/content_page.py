@@ -9,9 +9,9 @@ class ContentPage:
 
     @staticmethod
     def open_content_page(alias):
-        browser.open('/watch/' + alias)
+        with allure.step(f'Open content: {alias} page'):
+            browser.open('/watch/' + alias)
 
     def click_add_to_favorites(self):
         with allure.step("Click add to favorites icon"):
             self.add_to_favorites_image.click()
-
