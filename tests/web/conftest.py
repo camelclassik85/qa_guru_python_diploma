@@ -89,10 +89,10 @@ def browser_config(context, browser_name, browser_version):
 
         yield
 
-        with allure.step('Add screenshot'):
-            allure_attach.add_screenshot(browser)
-        with allure.step('Add html'):
-            allure_attach.add_html(browser)
+    with allure.step('Add screenshot'):
+        allure_attach.add_screenshot(browser)
+    with allure.step('Add html'):
+        allure_attach.add_html(browser)
 
     if browser_name == WebDriverDefaults.default_browser_name:
         with allure.step('Add logs'):
