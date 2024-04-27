@@ -6,6 +6,7 @@ from start.pages.header import Header
 from start.pages.main_page import MainPage
 from start.pages.registration_popup import RegistrationPopup
 from start.pages.search_page import SearchPage
+from start.pages.series_page import SeriesPage
 from start.pages.signin_page import SigninPage
 from start.pages.signup_page import SignupPage
 
@@ -23,6 +24,7 @@ class PageFactory:
         self.content_page = ContentPage()
         self.registration_popup = RegistrationPopup()
         self.favorites_page = FavoritesPage()
+        self.series_page = SeriesPage()
 
 
 pages = PageFactory()

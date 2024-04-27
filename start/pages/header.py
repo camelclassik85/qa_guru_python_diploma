@@ -9,6 +9,8 @@ class Header:
         self.search_input_text = browser.element(
             '.HeaderSearch_header-search__input-text__F3SjJ')
         self.search_result_films = browser.all('[data-testid="search_result"]')
+        self.series_button = browser.element('[data-testid="series_button"]')
+        self.start_logo = browser.element('[class="HeaderDesktop_header-desktop__left-section__Xj2yw"]>a')
 
     def click_on_search_loupe(self):
         with allure.step("Click header search loupe"):
@@ -21,3 +23,7 @@ class Header:
     def check_one_film_search_result_dropdown(self):
         with allure.step("Check one dropdown search result"):
             self.search_result_films.should(have.size(1))
+
+    def click_on_header_start_logo(self):
+        with allure.step("Click on Start header logo"):
+            self.start_logo.click()

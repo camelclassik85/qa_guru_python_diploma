@@ -12,6 +12,7 @@ web_signin_url = "/signin"
 web_account_url = "/account"
 web_search_url = "/search"
 web_favorites_url = "/favorites"
+web_series_url = "/series"
 
 
 class ApiUrl:
@@ -30,6 +31,7 @@ web_main_page_title = ("Онлайн-кинотеатр START — смотрет
                        " сериалы, мультфильмы онлайн. "
                        "Интернет кинотеатр с хорошим качеством видео")
 web_favorites_title = "Избранное"
+web_series_page_title = "Сериалы - смотреть онлайн"
 
 
 class Search:
