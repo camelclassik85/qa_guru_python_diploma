@@ -1,5 +1,6 @@
 import allure
 from selene import browser, have
+from start.constants import KIDS_HEADER_SECTION_NAMES
 
 
 class Header:
@@ -11,6 +12,7 @@ class Header:
         self.search_result_films = browser.all('[data-testid="search_result"]')
         self.series_button = browser.element('[data-testid="series_button"]')
         self.start_logo = browser.element('[class="HeaderDesktop_header-desktop__left-section__Xj2yw"]>a')
+        self.kids_content_sections = browser.all('.HeaderCatalog_header-catalog__child-link__7VASR')
 
     def click_on_search_loupe(self):
         with allure.step("Click header search loupe"):
@@ -27,3 +29,8 @@ class Header:
     def click_on_header_start_logo(self):
         with allure.step("Click on Start header logo"):
             self.start_logo.click()
+
+    def check_kids_header_content_sections_name(self):
+        with allure.step("Check kids header content sections name"):
+            for number, section in enumerate(self.kids_content_sections):
+                section.should(have.text(KIDS_HEADER_SECTION_NAMES[number]))

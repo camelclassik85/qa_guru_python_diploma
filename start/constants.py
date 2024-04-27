@@ -32,6 +32,9 @@ web_main_page_title = ("Онлайн-кинотеатр START — смотрет
                        "Интернет кинотеатр с хорошим качеством видео")
 web_favorites_title = "Избранное"
 web_series_page_title = "Сериалы - смотреть онлайн"
+web_kids_main_page_title = ("Детский онлайн-кинотеатр START — смотреть детские,"
+                            " сериалы, мультфильмы онлайн. Интернет кинотеатр "
+                            "с хорошим качеством видео")
 
 
 class Search:
@@ -49,4 +52,5 @@ class WebDriverDefaults:
     default_context = "web_selenoid"
 
 
+KIDS_HEADER_SECTION_NAMES = ('Развитие', 'Музыка', 'Развлечения', 'Детское ТВ')
 TIMEOUT = 10.0

@@ -1,7 +1,6 @@
 import allure
 from selene import browser, have, be
-
-from start.constants import web_main_page_title
+from start.constants import web_main_page_title, web_kids_main_page_title
 
 
 class MainPage:
@@ -16,6 +15,16 @@ class MainPage:
     def open_main_page():
         with allure.step("Open Main page"):
             browser.open('/')
+
+    @staticmethod
+    def open_kids_main_page():
+        with allure.step("Open kids main page"):
+            browser.open('/kids')
+
+    @staticmethod
+    def check_kids_main_page_title():
+        with allure.step("Validate Kids main page title"):
+            browser.should(have.title(web_kids_main_page_title))
 
     @staticmethod
     def open_film_page():
