@@ -1,5 +1,9 @@
 import allure
 from allure_commons.types import AttachmentType
+from curlify import to_curl
+import logging
+import json
+from requests import Response
 
 
 def add_screenshot(browser):
@@ -23,3 +27,23 @@ def add_video(browser):
            + video_url \
            + "' type='video/mp4'></video></body></html>"
     allure.attach(html, 'video_' + browser.driver.session_id, AttachmentType.HTML, '.html')
+
+
+def request_response_logger(response: Response):
+    with allure.step(f'{response.request.method} {response.request.url}'):
+        curl = to_curl(response.request)
+        logging.info(curl)
+        logging.info(f'status code: {response.status_code}')
+        allure.attach(body=curl, name='curl', attachment_type=allure.attachment_type.TEXT, extension='txt')
+
+        try:
+            allure.attach(body=json.dumps(response.json(), indent=4), name='response',
+                          attachment_type=allure.attachment_type.JSON, extension='json')
+        except json.JSONDecodeError:
+            if response.text:
+                allure.attach(body=response.text, name='response',
+                              attachment_type=allure.attachment_type.TEXT, extension='txt')
+            else:
+                # allure.attach(body=None, name='response', attachment_type=allure.attachment_type.TEXT, extension='txt')
+                pass
+        return response

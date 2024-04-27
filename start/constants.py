@@ -11,6 +11,13 @@ web_signup_url = "/signup"
 web_signin_url = "/signin"
 web_account_url = "/account"
 web_search_url = "/search"
+web_favorites_url = "/favorites"
+
+
+class ApiUrl:
+    base_api_url = 'https://api.start.ru'
+    favorites_endpoint = '/profile/favorites'
+
 
 '''Apikey'''
 web_apikey = "a20b12b279f744f2b3c7b5c5400c4eb5"
@@ -22,6 +29,7 @@ web_search_title = "Поиск"
 web_main_page_title = ("Онлайн-кинотеатр START — смотреть легальные фильмы,"
                        " сериалы, мультфильмы онлайн. "
                        "Интернет кинотеатр с хорошим качеством видео")
+web_favorites_title = "Избранное"
 
 
 class Search:

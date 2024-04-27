@@ -1,6 +1,7 @@
 from start.pages.account_page import AccountPage
 from start.pages.content_page import ContentPage
 from start.pages.cookie_popup import CookiePopup
+from start.pages.favorites_page import FavoritesPage
 from start.pages.header import Header
 from start.pages.main_page import MainPage
 from start.pages.registration_popup import RegistrationPopup
@@ -21,6 +22,7 @@ class PageFactory:
         self.main_page = MainPage()
         self.content_page = ContentPage()
         self.registration_popup = RegistrationPopup()
+        self.favorites_page = FavoritesPage()
 
 
 pages = PageFactory()

@@ -16,4 +16,5 @@ def test_authorization_email():
     pages.signin_page.signin_button_click()
     pages.signin_page.check_capcha()
     pages.account_page.open_account_page()
+    # logging.info(browser.driver.get_cookie('auth'))
     pages.account_page.check_user_email(email=authorized_user.email)
