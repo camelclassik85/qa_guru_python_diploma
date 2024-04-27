@@ -8,6 +8,7 @@ class ContentMovie:
     cls: str
     for_kids: bool
     favs_title: str
+    title: str
 
 
 @dataclass
@@ -25,7 +26,8 @@ cheburashka = ContentMovie(
     uid='fbe6a8e6-5dec-4a45-a54f-f309b96a5d4f',
     cls='Product.Movie',
     for_kids=True,
-    favs_title='Чебурашка смотреть онлайн')
+    favs_title='Чебурашка смотреть онлайн',
+    title='Чебурашка')
 
 syostry = ContentSeries(
     alias='syostry',
