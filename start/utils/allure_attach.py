@@ -4,29 +4,36 @@ from curlify import to_curl
 import logging
 import json
 from requests import Response
+from start.constants import WebDriverDefaults
 
 
 def add_screenshot(browser):
-    png = browser.driver.get_screenshot_as_png()
-    allure.attach(body=png, name='screenshot', attachment_type=AttachmentType.PNG, extension='.png')
+    with allure.step('Add screenshot'):
+        png = browser.driver.get_screenshot_as_png()
+        allure.attach(body=png, name='screenshot', attachment_type=AttachmentType.PNG, extension='.png')
 
 
-def add_logs(browser):
-    log = "".join(f'{text}\n' for text in browser.driver.get_log(log_type='browser'))
-    allure.attach(log, 'browser_logs', AttachmentType.TEXT, '.log')
+def add_logs(browser, browser_name):
+    if browser_name == WebDriverDefaults.default_browser_name:
+        with allure.step('Add logs'):
+            log = "".join(f'{text}\n' for text in browser.driver.get_log(log_type='browser'))
+            allure.attach(log, 'browser_logs', AttachmentType.TEXT, '.log')
 
 
 def add_html(browser):
-    html = browser.driver.page_source
-    allure.attach(html, 'page_source', AttachmentType.HTML, '.html')
+    with allure.step('Add html'):
+        html = browser.driver.page_source
+        allure.attach(html, 'page_source', AttachmentType.HTML, '.html')
 
 
-def add_video(browser):
-    video_url = "https://selenoid.autotests.cloud/video/" + browser.driver.session_id + ".mp4"
-    html = "<html><body><video width='100%' height='100%' controls autoplay><source src='" \
-           + video_url \
-           + "' type='video/mp4'></video></body></html>"
-    allure.attach(html, 'video_' + browser.driver.session_id, AttachmentType.HTML, '.html')
+def add_video(browser,context):
+    if context == WebDriverDefaults.default_context:
+        with allure.step('Add video'):
+            video_url = "https://selenoid.autotests.cloud/video/" + browser.driver.session_id + ".mp4"
+            html = "<html><body><video width='100%' height='100%' controls autoplay><source src='" \
+                   + video_url \
+                   + "' type='video/mp4'></video></body></html>"
+            allure.attach(html, 'video_' + browser.driver.session_id, AttachmentType.HTML, '.html')
 
 
 def request_response_logger(response: Response):
@@ -44,6 +51,5 @@ def request_response_logger(response: Response):
                 allure.attach(body=response.text, name='response',
                               attachment_type=allure.attachment_type.TEXT, extension='txt')
             else:
-                # allure.attach(body=None, name='response', attachment_type=allure.attachment_type.TEXT, extension='txt')
-                pass
+                allure.attach(body='', name='response', attachment_type=allure.attachment_type.TEXT, extension='txt')
         return response
