@@ -7,7 +7,9 @@ from start.data.content import chyornaya_vesna
 from start.schemas.content_series_data_schema import series_schema
 
 
-@allure.title("Checking content page series data")
+@allure.epic('API tests')
+@allure.feature('Content page series data')
+@allure.story("Checking content page series data")
 @pytest.mark.parametrize('series', [chyornaya_vesna])
 def test_content_page_series_data_api(series):
     endpoint = "/web/watch/" + series.alias

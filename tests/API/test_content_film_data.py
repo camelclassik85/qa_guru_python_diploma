@@ -7,7 +7,9 @@ from start.data.content import cheburashka
 from start.schemas.content_film_data_schema import film_schema
 
 
-@allure.title("Checking content page film data")
+@allure.epic('API tests')
+@allure.feature('Content page film data')
+@allure.story("Checking content page film data")
 @pytest.mark.parametrize('film', [cheburashka])
 def test_content_page_film_data_api(film):
     endpoint = "/web/watch/" + film.alias

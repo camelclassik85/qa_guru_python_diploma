@@ -6,7 +6,9 @@ from start.data.content import lermontov
 from start.schemas.search_result_data_schema import search_result
 
 
-@allure.title("Checking 1 item search result data")
+@allure.epic('API tests')
+@allure.feature('Search data')
+@allure.story("Checking 1 item search result data")
 def test_search_one_item_result_data_api():
     endpoint = "/v2/search"
     params = {"apikey": "a20b12b279f744f2b3c7b5c5400c4eb5",

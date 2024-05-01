@@ -7,7 +7,9 @@ from start.data.users import authorized_user
 from start.schemas.favorites_data_schema import favorites_schema
 
 
-@allure.title("Checking GET favorites data")
+@allure.epic('API tests')
+@allure.feature('Favorites data')
+@allure.story("Checking GET favorites data")
 def test_get_favorites_data_api():
     with allure.step("Add content to favorites"):
         api_call.add_to_favorites(user=authorized_user, content_uid=cheburashka.uid)
