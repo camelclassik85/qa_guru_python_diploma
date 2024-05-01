@@ -30,5 +30,5 @@ def test_content_page_series_data_api(series):
         assert response.json()['for_kids'] == series.for_kids
     with allure.step(f'Check seasons  q-ty - {series.items_total}'):
         assert response.json()['items_total'] == series.items_total
-    with allure.step('Schema is validate'):
+    with allure.step('Validate Schema'):
         validate(response.json(), series_schema)

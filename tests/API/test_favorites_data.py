@@ -29,7 +29,7 @@ def test_get_favorites_data_api():
         assert response.json()[0]['alias'] == chyornaya_vesna.alias
     with allure.step('Check 2nd item alias in list'):
         assert response.json()[1]['alias'] == cheburashka.alias
-    with allure.step('Schema is validate'):
+    with allure.step('Validate Schema'):
         validate(response.json(), favorites_schema)
 
     with allure.step("Delete content from favorites"):

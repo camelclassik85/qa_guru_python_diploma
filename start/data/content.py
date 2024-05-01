@@ -30,6 +30,14 @@ cheburashka = ContentMovie(
     favs_title='Чебурашка смотреть онлайн',
     title='Чебурашка')
 
+lermontov = ContentMovie(
+    alias='lermontov',
+    uid='0ba973d6-125f-4d16-9d57-7118a59eec49',
+    cls='Product.Movie',
+    for_kids=False,
+    favs_title='Лермонтов смотреть онлайн',
+    title='Лермонтов')
+
 syostry = ContentSeries(
     alias='syostry',
     uid='c289d12e-71a2-4db4-b79c-7b13141a1f2e',

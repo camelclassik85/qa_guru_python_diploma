@@ -28,5 +28,5 @@ def test_content_page_film_data_api(film):
         assert response.json()['uid'] == film.uid
     with allure.step(f'Check for_kids {film.for_kids} flag'):
         assert response.json()['for_kids'] == film.for_kids
-    with allure.step('Schema is validate'):
+    with allure.step('Validate Schema'):
         validate(response.json(), film_schema)
