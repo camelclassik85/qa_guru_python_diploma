@@ -32,5 +32,6 @@ def test_get_favorites_data_api():
     with allure.step('Schema is validate'):
         validate(response.json(), favorites_schema)
 
-    api_call.delete_from_favorites(user=authorized_user, content_uid=cheburashka.uid)
-    api_call.delete_from_favorites(user=authorized_user, content_uid=chyornaya_vesna.uid)
+    with allure.step("Delete content from favorites"):
+        api_call.delete_from_favorites(user=authorized_user, content_uid=cheburashka.uid)
+        api_call.delete_from_favorites(user=authorized_user, content_uid=chyornaya_vesna.uid)
