@@ -19,6 +19,7 @@ class ContentSeries:
     for_kids: bool
     items_total: int
     favs_title: str
+    title: str
 
 
 cheburashka = ContentMovie(
@@ -35,4 +36,14 @@ syostry = ContentSeries(
     cls='Product.Series',
     for_kids=False,
     items_total=3,
-    favs_title='Сестры смотреть онлайн')
+    favs_title='Сестры смотреть онлайн',
+    title='Сестры')
+
+chyornaya_vesna = ContentSeries(
+    alias='chyornaya-vesna',
+    uid='d979664b-3654-4e61-945d-33f78215cd5d',
+    cls='Product.Series',
+    for_kids=False,
+    items_total=1,
+    favs_title='Черная весна смотреть онлайн',
+    title='Черная весна')
