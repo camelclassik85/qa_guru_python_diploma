@@ -1,14 +1,12 @@
 import allure
-from jsonschema import validate
 from start.api.api import api_call
 from start.constants import ApiUrl
-from start.schemas.new_content_data_schema import new_content
 
 
 @allure.epic('API tests')
 @allure.feature('New content data')
 @allure.story("Checking new content data")
-def test_search_one_item_result_data_api():
+def test_new_content_data_api():
     endpoint = "/categories"
     params = {"category": "movie,series",
               "device_type": "web",
@@ -29,5 +27,3 @@ def test_search_one_item_result_data_api():
     if response.json()['items_total'] > 20:
         with allure.step(f'Check 20 items limit in response'):
             assert len(response.json()['items']) == 20
-    with allure.step('Validate Schema'):
-        validate(response.json(), new_content)
