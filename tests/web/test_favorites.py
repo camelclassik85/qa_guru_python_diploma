@@ -11,6 +11,7 @@ from start.pages.page_factory import pages
 @pytest.mark.parametrize('content', [cheburashka.alias])
 def test_favorites_show_popup_for_virtual(content):
     pages.content_page.open_content_page(content)
+    pages.cookie_popup.cookie_accept()
     pages.content_page.click_add_to_favorites()
     pages.registration_popup.check_popup_shows()
 
