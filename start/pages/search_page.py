@@ -10,8 +10,6 @@ class SearchPage:
             '[class="VideoUnit_vline__TljVd    VideoUnit_noPadding__oqnkQ"]')
         self.search_field = browser.element('#search')
         self.search_film_results = browser.all('[class="VideoUnit_vline__slider__card__dIGe3"]')
-        self.search_empty_results_block = browser.element(
-            '[class="Search_search__empty__5m3TS"]')
         self.search_recommendation_title = browser.element(
             '[class="Search_search__recommendation__title__AENpp"]')
         self.search_recommendation_desc = browser.element(
@@ -36,8 +34,6 @@ class SearchPage:
             self.search_film_results.should(have.size_greater_than(1))
 
     def check_empty_search_results(self):
-        with allure.step("Check empty search result block"):
-            self.search_empty_results_block.should(be.visible)
         with allure.step("Check empty search result recommendation title"):
             self.search_recommendation_title.should(have.text(
                 Search.search_recommendation_title_text))

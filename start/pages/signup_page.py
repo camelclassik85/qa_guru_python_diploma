@@ -9,8 +9,7 @@ class SignupPage:
         self.email_field = browser.element('#signField')
         self.password_field = browser.element('#signPassword')
         self.policy_checkbox = browser.element('[for="agreement"]')
-        self.signup_button = browser.element(
-            '[class="Button_red-button__GCS4r Button_fullWidth__YUBwh"]')
+        self.signup_button = browser.element('.Button_red-button__GCS4r.Button_fullWidth__YUBwh')
         self.capcha_input = browser.element('#signFieldCapcha')
 
     @staticmethod
