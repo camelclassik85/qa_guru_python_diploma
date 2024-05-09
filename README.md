@@ -156,3 +156,14 @@ AllureTestOps</a> (запрос доступа `admin@qa.guru`)
 
 ![This is an image](assets/jira_all_tests.png)
 
+## Видео прохождения теста:
+
+Видеозапись каждого теста генерируется с помощью `Selenoid` после успешного запуска контейнера c тестами в `Docker`.
+
+![video](assets/test_video.gif)
+
+## Получение уведомлений о прохождении тестов в Telegram
+
+После завершения сборки специальный Telegram-бот отправляет сообщение с отчетом.  
+
+![image](assets/tg_message.png)
