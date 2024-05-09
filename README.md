@@ -64,18 +64,16 @@ START — российский онлайн-кинотеатр, запущенн
    * Пример заполнения файла указан в файле с расширением `.env.example`
 2) Скачать проект и открыть в IDE
 3) Для локального запуска необходимо выполнить команду в терминале:
-    * Все тесты:
+    * Все тесты:<br>
     Параметры:
       * --context=web_local
       * --browser_name= на выбор доступны `chrome` и `firefox`
       * --browser_version= оставить пустым, чтобы был скачан актуальный вебдрайвер
-      
     ```commandline
     pytest . --context=web_local --browser_name=BROWSER_NAME --browser_version=
     ```
    * API тесты:
-   Параметры --context= --browser_name= --browser_version= оставить пустыми.
-   
+   Параметры --context= --browser_name= --browser_version= оставить пустыми. 
     ```commandline
     pytest tests/API --context= --browser_name= --browser_version=
     ```
@@ -83,20 +81,17 @@ START — российский онлайн-кинотеатр, запущенн
    Параметры:
       * --context=web_local
       * --browser_name= на выбор доступны `chrome` и `firefox`
-      * --browser_version= оставить пустым, чтобы был скачан актуальный вебдрайвер
-     
+      * --browser_version= оставить пустым, чтобы был скачан актуальный вебдрайвер 
     ```commandline
     pytest . --context=web_local --browser_name=BROWSER_NAME --browser_version=
     ```
       
 4) Выполнить запрос на формирование отчета  
-   note: команда для Windows
-
+* команда для Windows
 ```commandline
 allure serve
 ```
-   note: команда для MacOS и Linux
-
+* команда для MacOS и Linux
 ```commandline
 allure serve allure-results
 ```
