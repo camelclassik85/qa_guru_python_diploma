@@ -28,7 +28,7 @@ class CookiePopup:
 
     def cookie_accept(self):
         with allure.step("Cookie accept"):
-            if self.check_cookie1_presence():
-                self.cookie1_accept.click()
-            elif self.check_cookie2_presence():
+            if self.check_cookie2_presence():
                 self.cookie2_accept.click()
+            elif self.check_cookie1_presence():
+                self.cookie1_accept.click()
