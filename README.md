@@ -57,3 +57,45 @@ START — российский онлайн-кинотеатр, запущенн
 Фреймворк `Allure Report` собирает графический отчет о прохождении тестов  
 После завершения тестов `Telegram Bot` отправляет в `Telegram` краткий вариант `Allure Report`
 
+## Локальный запуск UI и API тестов  
+
+1) Необходимо создать следующий файл:
+   * `.env`  для запуска UI тестов локально и заполнить его актуальными тестовыми параметрами.
+   * Пример заполнения файла указан в файле с расширением `.env.example`
+2) Скачать проект и открыть в IDE
+3) Для локального запуска необходимо выполнить команду в терминале:
+    * Все тесты:
+    Параметры:
+      * --context=web_local
+      * --browser_name= на выбор доступны `chrome` и `firefox`
+      * --browser_version= оставить пустым, чтобы был скачан актуальный вебдрайвер
+    ```commandline
+    pytest . --context=web_local --browser_name=BROWSER_NAME --browser_version=
+    ```
+   * API тесты:
+   Параметры --context= --browser_name= --browser_version= оставить пустыми.
+    ```commandline
+    pytest tests/API --context= --browser_name= --browser_version=
+    ```
+   * UI тесты:
+   Параметры:
+      * --context=web_local
+      * --browser_name= на выбор доступны `chrome` и `firefox`
+      * --browser_version= оставить пустым, чтобы был скачан актуальный вебдрайвер
+    ```commandline
+    pytest . --context=web_local --browser_name=BROWSER_NAME --browser_version=
+    ```
+      
+4) Выполнить запрос на формирование отчета  
+   note: команда для Windows
+
+```commandline
+allure serve
+```
+   note: команда для MacOS и Linux
+
+```commandline
+allure serve allure-results
+```
+
+Результат: откроется страница с отчетом Allure Report
