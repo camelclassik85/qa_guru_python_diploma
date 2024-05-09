@@ -91,5 +91,3 @@ allure serve
 ```commandline
 allure serve allure-results
 ```
-
-Результат: откроется страница с отчетом Allure Report
