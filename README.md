@@ -32,7 +32,7 @@ START — российский онлайн-кинотеатр, запущенн
 
 ## Проект реализован с использованием:
 
-<p  align="left">
+<p  align="center">
 <code><img width="5%" title="python" src="assets/python.png"></code>
 <code><img width="5%" title="selene" src="assets/selene.png"></code>
 <code><img width="4.5%" title="selenium" src="assets/selenium.png"></code>
