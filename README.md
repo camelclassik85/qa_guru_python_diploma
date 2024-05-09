@@ -65,26 +65,22 @@ START — российский онлайн-кинотеатр, запущенн
 2) Скачать проект и открыть в IDE
 3) Для локального запуска необходимо выполнить команду в терминале:
     * Все тесты:<br>
-    Параметры:
-      * --context=web_local
-      * --browser_name= на выбор доступны `chrome` и `firefox`
-      * --browser_version= оставить пустым, чтобы был скачан актуальный вебдрайвер
     ```commandline
     pytest . --context=web_local --browser_name=BROWSER_NAME --browser_version=
     ```
+    * UI тесты:<br>
+    ```commandline
+    pytest tests/web --context=web_local --browser_name=BROWSER_NAME --browser_version=
+    ```
+   
    * API тесты:<br>
-    Параметры --context= --browser_name= --browser_version= оставить пустыми. 
     ```commandline
     pytest tests/API --context= --browser_name= --browser_version=
     ```
-   * UI тесты:<br>
    Параметры:
-      * --context=web_local
+      * --context=web_local для локального запуска
       * --browser_name= на выбор доступны `chrome` и `firefox`
-      * --browser_version= оставить пустым, чтобы был скачан актуальный вебдрайвер 
-    ```commandline
-    pytest . --context=web_local --browser_name=BROWSER_NAME --browser_version=
-    ```
+      * --browser_version= оставить пустым, чтобы был скачан актуальный вебдрайвер
       
 4) Выполнить запрос на формирование отчета:
 * команда для Windows
