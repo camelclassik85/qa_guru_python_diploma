@@ -72,12 +72,12 @@ START — российский онлайн-кинотеатр, запущенн
     ```commandline
     pytest . --context=web_local --browser_name=BROWSER_NAME --browser_version=
     ```
-   * API тесты:
-   Параметры --context= --browser_name= --browser_version= оставить пустыми. 
+   * API тесты:<br>
+    Параметры --context= --browser_name= --browser_version= оставить пустыми. 
     ```commandline
     pytest tests/API --context= --browser_name= --browser_version=
     ```
-   * UI тесты:
+   * UI тесты:<br>
    Параметры:
       * --context=web_local
       * --browser_name= на выбор доступны `chrome` и `firefox`
@@ -86,7 +86,7 @@ START — российский онлайн-кинотеатр, запущенн
     pytest . --context=web_local --browser_name=BROWSER_NAME --browser_version=
     ```
       
-4) Выполнить запрос на формирование отчета  
+4) Выполнить запрос на формирование отчета:
 * команда для Windows
 ```commandline
 allure serve
