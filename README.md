@@ -166,4 +166,4 @@ AllureTestOps</a> (запрос доступа `admin@qa.guru`)
 
 После завершения сборки специальный Telegram-бот отправляет сообщение с отчетом.  
 
-![image](assets/tg_message.png)
+<img src="assets/tg_message.png" width="250" height="300">
