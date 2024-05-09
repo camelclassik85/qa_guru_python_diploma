@@ -41,7 +41,7 @@ START — российский онлайн-кинотеатр, запущенн
 <code><img width="5%" title="jenkins" src="assets/jenkins.png"></code>
 <code><img width="5%" title="allure" src="assets/allure_report.png"></code>
 <code><img width="5%" title="alluretestops" src="assets/allure_testops.png"></code>
-<code><img width="6%" title="github" src="assets/github.png"></code>  
+<code><img width="5.7%" title="github" src="assets/github.png"></code>  
 <code><img width="5%" title="telegram" src="assets/tg.png"></code>   
 <code><img width="5%" title="pycharm" src="assets/intellij_pycharm.png"></code>
 <code><img width="5%" title="postman" src="assets/postman.png"></code>
