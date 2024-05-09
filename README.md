@@ -122,7 +122,7 @@ allure serve allure-results
 
 ![This is an image](assets/jenkins_build_start.png)
 
-#### 2. Выбрать пункт **Build with Parameters**
+2. Выбрать пункт **Build with Parameters**
 
 #### 3. Внести изменения в конфигурации сборки, при необходимости
 
