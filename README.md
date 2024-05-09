@@ -130,3 +130,10 @@ allure serve allure-results
 
 5. Результат запуска сборки можно посмотреть в классическом формате Allure Results
 
+### Allure отчет
+
+![image](assets/allure_results_jenkins_overview.png)
+Отчет позволяет получить детальную информацию по все шагам тестов, включая скриншоты и log - файлы
+
+![image](assets/allure_results_jenkins.png)
+
