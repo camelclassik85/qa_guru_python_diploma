@@ -59,22 +59,31 @@ START — российский онлайн-кинотеатр, запущенн
 
 ## Локальный запуск UI и API тестов  
 
-1) Необходимо создать следующий файл:
+1. Скачать проект и открыть в IDE 
+2. Необходимо создать следующий файл:
    * `.env`  для запуска UI тестов локально и заполнить его актуальными тестовыми параметрами.
    * Пример заполнения файла указан в файле с расширением `.env.example`
-2) Скачать проект и открыть в IDE
-3) Для локального запуска необходимо выполнить команду в терминале:
+3. Создайте и активируйте виртуальное окружение
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
+4. Установите зависимости с помощью pip
+   ```bash
+   pip install -r requirements.txt
+   ```
+5. Для локального запуска необходимо выполнить команду в терминале:
     * Все тесты:<br>
-    ```commandline
-    pytest . --context=web_local --browser_name=BROWSER_NAME --browser_version=
+    ```bash
+    pytest ./tests --context=web_local --browser_name=BROWSER_NAME --browser_version=
     ```
     * UI тесты:<br>
-    ```commandline
+    ```bash
     pytest tests/web --context=web_local --browser_name=BROWSER_NAME --browser_version=
     ```
    
    * API тесты:<br>
-    ```commandline
+    ```bash
     pytest tests/API --context= --browser_name= --browser_version=
     ```
    Параметры:
@@ -82,12 +91,17 @@ START — российский онлайн-кинотеатр, запущенн
       * --browser_name= на выбор доступны `chrome` и `firefox`
       * --browser_version= оставить пустым, чтобы был скачан актуальный вебдрайвер
       
-4) Выполнить запрос на формирование отчета:
+6. Выполнить запрос на формирование отчета:
 * команда для Windows
-```commandline
+```bash
 allure serve
 ```
 * команда для MacOS
-```commandline
+```bash
 allure serve allure-results
 ```
+
+<!-- Jenkins -->
+##  Удаленный запуск автотестов выполняется на сервере Jenkins
+
+<a target="_blank" href="https://jenkins.autotests.cloud/job/AD_qa_guru_diploma/">Ссылка на проект в Jenkins</a>
