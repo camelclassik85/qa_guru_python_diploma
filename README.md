@@ -137,3 +137,22 @@ allure serve allure-results
 
 ![image](assets/allure_results_jenkins.png)
 
+## Интеграция с Allure TestOps
+
+<a target="_blank" href="https://allure.autotests.cloud/project/4217/dashboards">Ссылка на проект в
+AllureTestOps</a> (запрос доступа `admin@qa.guru`)
+
+#### Список всех кейсов, имеющихся в проекте
+
+![This is an image](assets/alluretestops_test_cases.png)
+
+#### Отображение результатов прогона тестов
+
+![This is an image](assets/alluretestops_all_test_results.png)
+
+## Интеграция с Jira
+
+> <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1218">Ссылка на проект в Jira</a>
+
+![This is an image](assets/jira_all_tests.png)
+
