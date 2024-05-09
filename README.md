@@ -118,7 +118,7 @@ allure serve allure-results
 
 ### Запуск автотестов в Jenkins
 
-#### 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/AD_qa_guru_diploma/">проект</a>
+1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/AD_qa_guru_diploma/">проект</a>
 
 ![This is an image](assets/jenkins_build_start.png)
 
