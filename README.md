@@ -69,11 +69,13 @@ START — российский онлайн-кинотеатр, запущенн
       * --context=web_local
       * --browser_name= на выбор доступны `chrome` и `firefox`
       * --browser_version= оставить пустым, чтобы был скачан актуальный вебдрайвер
-    ```commandline
+      
+    <p>```commandline
     pytest . --context=web_local --browser_name=BROWSER_NAME --browser_version=
-    ```
+    ```</p>
    * API тесты:
    Параметры --context= --browser_name= --browser_version= оставить пустыми.
+   
     ```commandline
     pytest tests/API --context= --browser_name= --browser_version=
     ```
@@ -82,6 +84,7 @@ START — российский онлайн-кинотеатр, запущенн
       * --context=web_local
       * --browser_name= на выбор доступны `chrome` и `firefox`
       * --browser_version= оставить пустым, чтобы был скачан актуальный вебдрайвер
+     
     ```commandline
     pytest . --context=web_local --browser_name=BROWSER_NAME --browser_version=
     ```
