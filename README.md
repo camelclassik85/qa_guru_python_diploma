@@ -48,5 +48,5 @@ START — российский онлайн-кинотеатр, запущенн
 <code><img width="5%" title="pycharm" src="assets/intellij_pycharm.png"></code>
 <code><img width="5%" title="postman" src="assets/postman.png"></code>
 <code><img width="5%" title="jira" src="assets/jira.png"></code>
-
+<code><img width="4%" title="requests" src="assets/requests.png"></code>
 
