@@ -152,7 +152,7 @@ AllureTestOps</a> (запрос доступа `admin@qa.guru`)
 
 ## Интеграция с Jira
 
-> <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1218">Ссылка на проект в Jira</a>
+<a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1218">Ссылка на проект в Jira</a>
 
 ![This is an image](assets/jira_all_tests.png)
 
