@@ -87,7 +87,7 @@ START — российский онлайн-кинотеатр, запущенн
 ```commandline
 allure serve
 ```
-* команда для MacOS и Linux
+* команда для MacOS
 ```commandline
 allure serve allure-results
 ```
