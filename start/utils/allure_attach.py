@@ -4,29 +4,39 @@ from curlify import to_curl
 import logging
 import json
 from requests import Response
+from urllib3.exceptions import MaxRetryError
 from start.constants import WebDriverDefaults
 
 
 def add_screenshot(browser):
     with allure.step('Add screenshot'):
-        png = browser.driver.get_screenshot_as_png()
-        allure.attach(body=png, name='screenshot', attachment_type=AttachmentType.PNG, extension='.png')
+        try:
+            png = browser.driver.get_screenshot_as_png()
+            allure.attach(body=png, name='screenshot', attachment_type=AttachmentType.PNG, extension='.png')
+        except MaxRetryError:
+            pass
 
 
 def add_logs(browser, browser_name):
     if browser_name == WebDriverDefaults.default_browser_name:
         with allure.step('Add logs'):
-            log = "".join(f'{text}\n' for text in browser.driver.get_log(log_type='browser'))
-            allure.attach(log, 'browser_logs', AttachmentType.TEXT, '.log')
+            try:
+                log = "".join(f'{text}\n' for text in browser.driver.get_log(log_type='browser'))
+                allure.attach(log, 'browser_logs', AttachmentType.TEXT, '.log')
+            except MaxRetryError:
+                pass
 
 
 def add_html(browser):
     with allure.step('Add html'):
-        html = browser.driver.page_source
-        allure.attach(html, 'page_source', AttachmentType.HTML, '.html')
+        try:
+            html = browser.driver.page_source
+            allure.attach(html, 'page_source', AttachmentType.HTML, '.html')
+        except MaxRetryError:
+            pass
 
 
-def add_video(browser,context):
+def add_video(browser, context):
     if context == WebDriverDefaults.default_context:
         with allure.step('Add video'):
             video_url = "https://selenoid.autotests.cloud/video/" + browser.driver.session_id + ".mp4"

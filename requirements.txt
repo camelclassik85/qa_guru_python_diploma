@@ -6,3 +6,4 @@ requests~=2.31.0
 pydantic~=2.7.0
 curlify~=2.2.1
 jsonschema~=4.21.1
+urllib3~=2.2.1
