@@ -87,7 +87,7 @@
     pytest tests/API --context= --browser_name= --browser_version=
     ```
    Параметры:
-      * --context=web_local для локального запуска
+      * --context=web_local для локального запуска. Для запуска через Selenoid будет web_selenoid
       * --browser_name= на выбор доступны `chrome` и `firefox`
       * --browser_version= оставить пустым, чтобы был скачан актуальный вебдрайвер
       
