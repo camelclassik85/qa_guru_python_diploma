@@ -1,7 +1,7 @@
 import allure
 from selene import browser, have
-from start.constants import web_favorites_title, web_favorites_url
-from start.data.users import User
+from start.test_data.constants import web_favorites_title, web_favorites_url
+from start.test_data.users import User
 from start.utils.cookie import add_auth_cookie_to_browser
 
 

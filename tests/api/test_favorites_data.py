@@ -1,16 +1,15 @@
 import allure
 from jsonschema import validate
 from start.api.api import api_call
-from start.constants import ApiUrl
-from start.data.content import cheburashka, chyornaya_vesna
-from start.data.users import authorized_user
+from start.test_data.content import cheburashka, chyornaya_vesna
+from start.test_data.users import authorized_user
 from start.schemas.favorites_data_schema import favorites_schema
 
 
 @allure.epic('API tests')
 @allure.feature('Favorites data')
 @allure.story("Checking GET favorites data")
-def test_get_favorites_data_api():
+def test_get_favorites_data_api(base_api_url):
     with allure.step("Add content to favorites"):
         api_call.add_to_favorites(user=authorized_user, content_uid=cheburashka.uid)
         api_call.add_to_favorites(user=authorized_user, content_uid=chyornaya_vesna.uid)
@@ -21,7 +20,7 @@ def test_get_favorites_data_api():
               "content_lang": "ru"
               }
     cookies = {'auth': authorized_user.auth}
-    response = api_call.api_request(ApiUrl.base_api_url, endpoint, "GET", params=params, cookies=cookies)
+    response = api_call.api_request(base_api_url, endpoint, "GET", params=params, cookies=cookies)
 
     with allure.step('Check status code = 200'):
         assert response.status_code == 200

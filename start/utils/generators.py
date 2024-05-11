@@ -1,5 +1,5 @@
 import random
-from start.constants import email_length, generator_collection, password_length
+from start.test_data.constants import email_length, generator_collection, password_length
 
 
 def random_email_generate():

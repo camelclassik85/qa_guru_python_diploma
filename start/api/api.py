@@ -1,7 +1,7 @@
 import allure
 import requests
-from start.constants import ApiUrl, web_apikey
-from start.data.users import User
+from start.test_data.constants import ApiUrl, web_apikey
+from start.test_data.users import User
 from start.utils.allure_attach import request_response_logger
 
 

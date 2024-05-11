@@ -1,9 +1,9 @@
 import allure
 import pytest
 from start.api.api import api_call
-from start.data.content import cheburashka, syostry
-from start.data.users import authorized_user
-from start.pages.page_factory import pages
+from start.test_data.content import cheburashka, syostry
+from start.test_data.users import authorized_user
+from start.models.page_factory import pages
 
 
 @allure.epic('Favorites tests')

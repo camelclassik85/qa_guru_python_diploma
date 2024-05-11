@@ -1,12 +1,12 @@
 import allure
 from start.api.api import api_call
-from start.constants import ApiUrl
+from start.test_data.constants import ApiUrl
 
 
 @allure.epic('API tests')
 @allure.feature('New content data')
 @allure.story("Checking new content data")
-def test_new_content_data_api():
+def test_new_content_data_api(base_api_url):
     endpoint = "/categories"
     params = {"category": "movie,series",
               "device_type": "web",
@@ -18,7 +18,7 @@ def test_new_content_data_api():
               "skip": 0
               }
 
-    response = api_call.api_request(ApiUrl.base_api_url, endpoint, "GET", params=params)
+    response = api_call.api_request(base_api_url, endpoint, "GET", params=params)
 
     with allure.step('Check status code = 200'):
         assert response.status_code == 200

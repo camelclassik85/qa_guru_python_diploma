@@ -1,5 +1,5 @@
 import allure
-from start.pages.page_factory import pages
+from start.models.page_factory import pages
 
 
 @allure.epic('Header tests')

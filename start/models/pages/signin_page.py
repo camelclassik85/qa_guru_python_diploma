@@ -1,6 +1,6 @@
 import allure
 from selene import browser, have, be
-from start.constants import web_signin_url, web_signin_page_title
+from start.test_data.constants import web_signin_url, web_signin_page_title
 
 
 class SigninPage:

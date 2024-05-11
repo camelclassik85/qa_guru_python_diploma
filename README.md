@@ -84,7 +84,7 @@
    
    * API тесты:<br>
     ```bash
-    pytest tests/API --context= --browser_name= --browser_version=
+    pytest tests/api
     ```
    Параметры:
       * --context=web_local для локального запуска. Для запуска через Selenoid будет web_selenoid

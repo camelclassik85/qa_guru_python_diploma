@@ -1,6 +1,6 @@
 import allure
 from selene import browser, have
-from start.constants import KIDS_HEADER_SECTION_NAMES
+from start.test_data.constants import KIDS_HEADER_SECTION_NAMES
 
 
 class Header:

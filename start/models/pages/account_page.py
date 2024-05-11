@@ -1,6 +1,6 @@
 import allure
 from selene import browser, have
-from start.constants import web_account_url
+from start.test_data.constants import web_account_url
 
 
 class AccountPage:

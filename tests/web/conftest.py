@@ -4,16 +4,16 @@ import pytest
 from dotenv import load_dotenv
 from selene import browser
 from selenium import webdriver
-from start.constants import web_base_url, WebDriverDefaults, TIMEOUT
+from start.test_data.constants import web_base_url, WebDriverDefaults, TIMEOUT
 from start.utils import allure_attach
 from start.utils.resource import path
 
 
 @allure.step('Select variables according command line')
 def pytest_addoption(parser):
-    parser.addoption("--browser_name", action="store")
-    parser.addoption("--browser_version", action="store")
-    parser.addoption("--context", action="store")
+    parser.addoption("--browser_name", action="store", default='')
+    parser.addoption("--browser_version", action="store", default='')
+    parser.addoption("--context", action="store", default='')
 
 
 @pytest.fixture(scope='session', autouse=True)

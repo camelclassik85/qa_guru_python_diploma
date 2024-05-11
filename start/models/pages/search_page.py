@@ -1,6 +1,6 @@
 import allure
 from selene import browser, have
-from start.constants import Search, web_search_url, web_search_title
+from start.test_data.constants import Search, web_search_url, web_search_title
 
 
 class SearchPage:
