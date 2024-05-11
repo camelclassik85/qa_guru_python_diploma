@@ -1,6 +1,7 @@
 import allure
 from jsonschema import validate
 from start.api.api import api_call
+from start.test_data.constants import ApiUrl
 from start.test_data.content import lermontov
 from start.schemas.search_result_data_schema import search_result
 
@@ -8,7 +9,7 @@ from start.schemas.search_result_data_schema import search_result
 @allure.epic('API tests')
 @allure.feature('Search data')
 @allure.story("Checking 1 item search result data")
-def test_search_one_item_result_data_api(base_api_url):
+def test_search_one_item_result_data_api():
     endpoint = "/v2/search"
     params = {"apikey": "a20b12b279f744f2b3c7b5c5400c4eb5",
               "locale": "ru",
@@ -17,7 +18,7 @@ def test_search_one_item_result_data_api(base_api_url):
               "offset": 0
               }
 
-    response = api_call.api_request(base_api_url, endpoint, "GET", params=params)
+    response = api_call.api_request(ApiUrl.base_api_url, endpoint, "GET", params=params)
 
     with allure.step('Check status code = 200'):
         assert response.status_code == 200
