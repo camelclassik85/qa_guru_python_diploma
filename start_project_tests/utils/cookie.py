@@ -1,6 +1,6 @@
 from selene import browser
-from start.test_data.constants import web_base_url
-from start.test_data.users import User
+from start_project_tests.test_data.constants import web_base_url
+from start_project_tests.test_data.users import User
 
 
 def add_auth_cookie_to_browser(user: User, url: str = '/'):

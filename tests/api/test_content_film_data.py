@@ -1,10 +1,10 @@
 import allure
 import pytest
 from jsonschema import validate
-from start.api.api import api_call
-from start.test_data.constants import ApiUrl
-from start.test_data.content import cheburashka
-from start.schemas.content_film_data_schema import film_schema
+from start_project_tests.api.api import api_call
+from start_project_tests.test_data.constants import ApiUrl
+from start_project_tests.test_data.content import cheburashka
+from start_project_tests.schemas.content_film_data_schema import film_schema
 
 
 @allure.epic('API tests')

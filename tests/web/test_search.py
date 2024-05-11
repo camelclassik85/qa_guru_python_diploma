@@ -1,7 +1,7 @@
 import allure
 import pytest
-from start.test_data.constants import Search
-from start.models.page_factory import pages
+from start_project_tests.test_data.constants import Search
+from start_project_tests.models.page_factory import pages
 
 
 @allure.epic('Search tests')

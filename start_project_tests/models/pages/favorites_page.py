@@ -1,8 +1,8 @@
 import allure
 from selene import browser, have
-from start.test_data.constants import web_favorites_title, web_favorites_url
-from start.test_data.users import User
-from start.utils.cookie import add_auth_cookie_to_browser
+from start_project_tests.test_data.constants import web_favorites_title, web_favorites_url
+from start_project_tests.test_data.users import User
+from start_project_tests.utils.cookie import add_auth_cookie_to_browser
 
 
 class FavoritesPage:

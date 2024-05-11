@@ -1,6 +1,6 @@
 import allure
-from start.api.api import api_call
-from start.test_data.constants import ApiUrl
+from start_project_tests.api.api import api_call
+from start_project_tests.test_data.constants import ApiUrl
 
 
 @allure.epic('API tests')

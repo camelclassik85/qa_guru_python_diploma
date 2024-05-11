@@ -1,6 +1,6 @@
 import allure
 from selene import browser, have
-from start.test_data.constants import web_series_page_title, web_series_url
+from start_project_tests.test_data.constants import web_series_page_title, web_series_url
 
 
 class SeriesPage:

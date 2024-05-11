@@ -1,8 +1,8 @@
 import allure
 import requests
-from start.test_data.constants import ApiUrl, web_apikey
-from start.test_data.users import User
-from start.utils.allure_attach import request_response_logger
+from start_project_tests.test_data.constants import ApiUrl, web_apikey
+from start_project_tests.test_data.users import User
+from start_project_tests.utils.allure_attach import request_response_logger
 
 
 class ApiCall:

@@ -1,6 +1,6 @@
 import allure
-from start.models.page_factory import pages
-from start.utils.generators import random_email_generate, random_password_generate
+from start_project_tests.models.page_factory import pages
+from start_project_tests.utils.generators import random_email_generate, random_password_generate
 
 
 @allure.epic('Registration tests')

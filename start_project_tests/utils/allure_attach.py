@@ -5,7 +5,7 @@ import logging
 import json
 from requests import Response
 from urllib3.exceptions import MaxRetryError
-from start.test_data.constants import WebDriverDefaults
+from start_project_tests.test_data.constants import WebDriverDefaults
 
 
 def add_screenshot(browser):

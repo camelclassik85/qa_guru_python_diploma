@@ -4,9 +4,9 @@ import pytest
 from dotenv import load_dotenv
 from selene import browser
 from selenium import webdriver
-from start.test_data.constants import web_base_url, WebDriverDefaults, TIMEOUT
-from start.utils import allure_attach
-from start.utils.resource import path
+from start_project_tests.test_data.constants import web_base_url, WebDriverDefaults, TIMEOUT
+from start_project_tests.utils import allure_attach
+from start_project_tests.utils.resource import path
 
 
 @allure.step('Select variables according command line')

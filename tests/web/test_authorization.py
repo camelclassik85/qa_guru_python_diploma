@@ -1,6 +1,6 @@
 import allure
-from start.test_data.users import authorized_user
-from start.models.page_factory import pages
+from start_project_tests.test_data.users import authorized_user
+from start_project_tests.models.page_factory import pages
 
 
 @allure.epic('Authorization tests')

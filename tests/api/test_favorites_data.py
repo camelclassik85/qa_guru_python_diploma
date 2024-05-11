@@ -1,10 +1,10 @@
 import allure
 from jsonschema import validate
-from start.api.api import api_call
-from start.test_data.constants import ApiUrl
-from start.test_data.content import cheburashka, chyornaya_vesna
-from start.test_data.users import authorized_user
-from start.schemas.favorites_data_schema import favorites_schema
+from start_project_tests.api.api import api_call
+from start_project_tests.test_data.constants import ApiUrl
+from start_project_tests.test_data.content import cheburashka, chyornaya_vesna
+from start_project_tests.test_data.users import authorized_user
+from start_project_tests.schemas.favorites_data_schema import favorites_schema
 
 
 @allure.epic('API tests')

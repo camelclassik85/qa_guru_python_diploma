@@ -1,6 +1,6 @@
 import os
 from pydantic import BaseModel
-from start.test_data.constants import TIMEOUT
+from start_project_tests.test_data.constants import TIMEOUT
 
 
 class WebConfig(BaseModel):
