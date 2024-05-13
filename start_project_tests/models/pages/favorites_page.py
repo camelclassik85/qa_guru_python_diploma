@@ -27,7 +27,7 @@ class FavoritesPage:
             browser.should(have.title(web_favorites_title))
 
     def check_content_presence_in_favorites(self, content: str):
-        with allure.step("Validate Favorites q-ty mote than 0"):
+        with allure.step("Validate Favorites q-ty more than 0"):
             self.favorites_content_list.should(have.size_greater_than(0))
         with allure.step(f"Check content title({content}) presence"):
             browser.element(content)
